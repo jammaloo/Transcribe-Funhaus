@@ -1,0 +1,3 @@
+#!/bin/bash
+brew install yt-dlp
+pip install -U openai-whisper
