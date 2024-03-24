@@ -1,3 +1,4 @@
 #!/bin/bash
-brew install yt-dlp
+command -v brew && brew install yt-dlp
+command -v dnf && sudo dnf install yt-dlp
 pip install -U openai-whisper
