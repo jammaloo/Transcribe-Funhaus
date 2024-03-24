@@ -1,5 +1,6 @@
 #!/bin/bash
-command -v brew && brew install yt-dlp
-command -v dnf && sudo dnf install yt-dlp
-command -v apt && sudo apt install yt-dlp
+command -v brew && brew install yt-dlp sqlite3
+command -v dnf && sudo dnf install yt-dlp sqlite3
+command -v apt && sudo apt install yt-dlp sqlite3
 pip install -U openai-whisper
+curl -fsSL https://bun.sh/install | bash
