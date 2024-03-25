@@ -2,6 +2,7 @@
 listing.csv
 funhaus.db-shm
 funhaus.db-wal
+downloads/*.opus
 
 # Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 
