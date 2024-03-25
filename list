@@ -1,2 +1,2 @@
 #!/bin/bash
-yt-dlp --print "%(id)s;%(title)s;%(view_count)s" "https://www.youtube.com/funhaus" > listing.csv
+yt-dlp --print "%(id)s;%(title)s;%(view_count)s;%(upload_date)s" "https://www.youtube.com/funhaus" > listing.csv
