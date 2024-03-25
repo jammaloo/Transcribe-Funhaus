@@ -3,7 +3,7 @@ const db = new Database("funhaus.db");
 
 db.exec("PRAGMA journal_mode = WAL;");
 
-const videoId = process.argv[2].replace(/[^a-z0-9]/gi, '');
+const videoId = process.argv[2].replace(/[^a-z0-9\-_]/gi, '');
 
 
 const file = Bun.file(import.meta.dir + `/transcriptions/${videoId}.tsv`);
