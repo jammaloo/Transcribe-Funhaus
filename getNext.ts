@@ -11,4 +11,5 @@ if (result) {
     console.log(result.id);
 } else {
     console.log("No videos to process");
+    process.exit(1);
 }
