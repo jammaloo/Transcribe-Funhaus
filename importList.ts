@@ -10,7 +10,7 @@ const listing = await file.text();
 
 const insert = db.prepare("INSERT OR REPLACE INTO videos (id, title, view_count, updated_at, upload_date) VALUES ($id, $title, $view_count, $updated_at, $upload_date)");
 
-const insertVideos = db.transaction(cats => {
+const insertVideos = db.transaction(() => {
     const videos = listing.split("\n");
     for (const video of videos) {
         if(!video) continue;

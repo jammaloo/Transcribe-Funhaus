@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+set -o pipefail
+VIDEO_ID=`bun getNext.ts`
+if ! test -f "./downloads/${VIDEO_ID}.opus"; then
+  yt-dlp -x "https://www.youtube.com/watch?v=${VIDEO_ID}" -o "./downloads/${VIDEO_ID}"
+fi
+whisper-ctranslate2 "downloads/${VIDEO_ID}.opus" --model small --language English --output_dir "./transcriptions" --output_format tsv
+bun processTranscription.ts $VIDEO_ID

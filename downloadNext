@@ -1,3 +1,0 @@
-#!/bin/bash
-VIDEO_ID=`bun getNext.ts`
-yt-dlp -x "https://www.youtube.com/watch?v=${VIDEO_ID}" -o "downloads/${VIDEO_ID}"
