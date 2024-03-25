@@ -1,6 +1,8 @@
 import { Database } from "bun:sqlite";
 const db = new Database("funhaus.db");
 
+db.exec("PRAGMA journal_mode = WAL;");
+
 const file = Bun.file(import.meta.dir + '/listing.csv');
 
 const listing = await file.text();
